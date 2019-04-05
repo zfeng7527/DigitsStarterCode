@@ -10,12 +10,18 @@ public class Digits
     //represents num
     public Digits (int num)
     {
-        //implemented in part (a)
+        digitList = new ArrayList<>();
+        for(int mod=10; num!=0; num=num/10 ){
+            int remainder=num%mod;
+            digitList.add(0,remainder);
+        }
+        if (digitList.size()==0){digitList.add(0);
     }
-    public boolean isStrictlyIncreasing()
-    {
-        //implemented in part (b)
     }
+//    public boolean isStrictlyIncreasing()
+//    {
+//        //implemented in part (b)
+//    }
     //Extra method to make the runner easier to read
     public ArrayList<Integer> getDigitList()
     {
